@@ -54,8 +54,6 @@ class ViewController: UIViewController {
         
         //update view
         updateView()
-        
-        print(emojiDict)
     }
     
     
