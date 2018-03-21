@@ -43,6 +43,15 @@ class ViewController: UIViewController {
         flipCount = 0
         flipCountLabel.text = "Count:"+String(flipCount)
         
+
+        //clear dictionary
+        for (keyIndex, _) in emojiDict{
+            emojiDict[keyIndex] = nil
+        }
+        
+        //set New Theme
+        setTheme()
+        
         //update view
         updateView()
         
@@ -90,14 +99,28 @@ class ViewController: UIViewController {
         
     }
     
-    var emojiChoices = ["😇","😉","🤓","🙄","😡","😍","🤑","😋"]
+    var emojiLibrary = [0:["😇","😉","🤓","🙄","😡","😍","🤑","😋"],
+                        1:["🐶","🐷","🐸","🐴","🦁","🐰","🐙"],
+                        2:["🌧","⛈","🌨","☀️","☔️","🌝","☃️","💫"]]
+
+    var emojiChoice = ["😇","😉","🤓","🙄","😡","😍","🤑","😋"]
     var emojiDict = [Int:String]()
+    
+    
+    func setTheme(){
+        let emojiIndex = Int(arc4random_uniform(UInt32(emojiLibrary.keys.count)))
+        if (emojiLibrary[emojiIndex] != nil){
+            emojiChoice = emojiLibrary[emojiIndex]!
+        }else{
+            print("index not found in emoji library")
+        }
+    }
     
     func emoji(for card: Card) -> String {
         
-        if emojiDict[card.identifier] == nil, emojiChoices.count>0{
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emojiDict[card.identifier] = emojiChoices.remove(at: randomIndex)
+        if emojiDict[card.identifier] == nil, emojiChoice.count>0{
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoice.count)))
+            emojiDict[card.identifier] = emojiChoice.remove(at: randomIndex)
         }
         return emojiDict[card.identifier] ?? "?"
     }
