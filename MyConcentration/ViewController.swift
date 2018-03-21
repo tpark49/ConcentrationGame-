@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MyConcentration
 //
-//  Created by Yu-Ting Chen on 3/19/18.
+//  Created by Tony Park on 3/19/18.
 //  Copyright © 2018 Tony Park. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     lazy var mygame: Myconcentration = Myconcentration(numberOfPairsofCards:self.cardButton.count/2)
     
+    //flipcount variable
     var flipCount = 0
     
     @IBAction func newGame(_ sender: UIButton) {
