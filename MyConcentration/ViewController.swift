@@ -25,8 +25,8 @@ class ViewController: UIViewController {
             mygame.cards[index].faceUp = false
             mygame.cards[index].isMatched = false
         }
-        print(emojiDict)
-        
+    
+        //unique emojies by adding identifiers
         for index in 1...cardButton.count/2{
             let randInt = Int(arc4random_uniform(UInt32(array.count)))
             mygame.cards[array[randInt]].identifier = index
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             let randInt_2 = Int(arc4random_uniform(UInt32(array.count)))
             mygame.cards[array[randInt_2]].identifier = index
             array.remove(at: randInt_2)
-            print(randInt, randInt_2)
+        
             
         }
         //set count to 0 again
