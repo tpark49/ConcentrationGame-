@@ -141,9 +141,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzi-8N-Rzq">
-                                <rect key="frame" x="103" y="468" width="168" height="82"/>
+                                <rect key="frame" x="103" y="454" width="168" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-Jm-leM">
+                                <rect key="frame" x="113" y="528" width="226" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -153,6 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="Tzi-8N-Rzq" id="Os9-dB-HUQ"/>
+                        <outlet property="scoreLabel" destination="7gv-Jm-leM" id="RLs-kT-Spa"/>
                         <outletCollection property="cardButton" destination="b4u-gp-Q2X" collectionClass="NSMutableArray" id="iD4-3F-fF0"/>
                         <outletCollection property="cardButton" destination="ry7-4a-8hS" collectionClass="NSMutableArray" id="WPP-PO-mlW"/>
                         <outletCollection property="cardButton" destination="ZbB-6H-Tug" collectionClass="NSMutableArray" id="DPs-kD-F98"/>
