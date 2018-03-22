@@ -62,24 +62,24 @@ class ViewController: UIViewController {
                 oneCardIndex = cardIndex
             }
         }
-        var theOtherPair = 0
-        var theOtherPair_1 = 0
         
+        var theOtherPair = 0
         //if only onecardup istrue
         if oneCardUp == true{
             if mygame.cards[index].isMatched == false{
-                if scoreLib[index] == nil{
-                    scoreLib[index] = true
-                }
                 for cardIndex in cardButton.indices{
-                    if mygame.cards[cardIndex].identifier == mygame.cards[oneCardIndex].identifier {
+                    if mygame.cards[cardIndex].identifier == mygame.cards[oneCardIndex].identifier, cardIndex != oneCardIndex {
                         theOtherPair = cardIndex
                     }}
-                if scoreLib[theOtherPair] == true{
+                if scoreLib[theOtherPair] != nil{
                     scorePoints-=1
                 }
             }
         }
+        if scoreLib[index] == nil{
+            scoreLib[index] = true
+        }
+        
         //if cards have matched
         if mygame.cards[index].isMatched == true{
             scorePoints += 2
@@ -133,6 +133,12 @@ class ViewController: UIViewController {
         
         //reset score
         scorePoints = 0
+        scoreLabel.text = "Score:" + String(scorePoints)
+        
+        //reset score library 
+        for (keyIndex, _) in scoreLib{
+            scoreLib[keyIndex] = nil
+        }
     }
     
     

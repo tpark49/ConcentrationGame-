@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyConcentration/ViewController.swift"
-            timestampString = "543394788.736496"
+            timestampString = "543455921.59752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212">
+            startingLineNumber = "218"
+            endingLineNumber = "218">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyConcentration/ViewController.swift"
-            timestampString = "543394788.736496"
+            timestampString = "543455921.59752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "updateView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyConcentration/ViewController.swift"
-            timestampString = "543394788.736496"
+            timestampString = "543455921.59752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "setTheme()"
             landmarkType = "7">
             <Locations>
@@ -166,12 +166,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyConcentration/ViewController.swift"
-            timestampString = "543394788.736496"
+            timestampString = "543454947.556932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "newGame(_:)"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "updateScore(at:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -182,13 +182,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyConcentration/ViewController.swift"
-            timestampString = "543394788.736496"
+            timestampString = "543455557.6552171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "newGame(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyConcentration.ViewController.cardButton.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.UIButton&gt;&gt;"
+                  moduleName = "MyConcentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutingchen/Desktop/Tony/MyConcentration/MyConcentration/MyConcentration/ViewController.swift"
+                  timestampString = "543455558.1511379"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyConcentration.ViewController.cardButton.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.Array&lt;__ObjC.UIButton&gt;&gt;"
+                  moduleName = "MyConcentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutingchen/Desktop/Tony/MyConcentration/MyConcentration/MyConcentration/ViewController.swift"
+                  timestampString = "543455558.154436"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyConcentration.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MyConcentration.ViewController"
+                  moduleName = "MyConcentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutingchen/Desktop/Tony/MyConcentration/MyConcentration/MyConcentration/ViewController.swift"
+                  timestampString = "543455558.157577"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "290">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyConcentration.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyConcentration.ViewController&gt;"
+                  moduleName = "MyConcentration"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yutingchen/Desktop/Tony/MyConcentration/MyConcentration/MyConcentration/ViewController.swift"
+                  timestampString = "543455558.1625839"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "205">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
