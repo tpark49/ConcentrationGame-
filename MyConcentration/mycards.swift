@@ -19,10 +19,10 @@ struct Card
     //identifier 
     var identifier: Int
     
-    static var identifier_helper = 0
+    private static var identifier_helper = 0
     
     //unique identifier to determine if theres a match
-    static func getUniqueIdentifier() -> Int{
+    private static func getUniqueIdentifier() -> Int{
         identifier_helper+=1
         return identifier_helper
     }

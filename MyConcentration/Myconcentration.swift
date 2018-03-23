@@ -19,6 +19,7 @@ class Myconcentration
     func chooseCard(index: Int){
         
         var indexOfOne:Int?
+    
         
         //check what the value of indexOfOne would be
         for myIndex in cards.indices{

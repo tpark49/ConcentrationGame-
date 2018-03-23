@@ -10,19 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var mygame: Myconcentration = Myconcentration(numberOfPairsofCards:self.cardButton.count/2)
+    private lazy var mygame: Myconcentration = Myconcentration(numberOfPairsofCards:self.cardButton.count/2)
     
     //flipcount variable
-    var flipCount = 0
+    private(set) var flipCount = 0
     
     
     //score variable
     var scorePoints = 0
     
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
     
     var scoreLib = [Int:Bool]()
-    func checkScore(){
+    private func checkScore(){
         for index in cardButton.indices{
             let card = mygame.cards[index]
             
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
                 //if the card is not in the library
                 if scoreLib[card.identifier] == nil{
                     if card.isMatched == true{
+                        
                         scorePoints+=1
                     }
                     scoreLib[card.identifier] = true
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
         }}
     
     
-    func updateScore(at index: Int){
+    private func updateScore(at index: Int){
         //find out if there is only one card faced up
         var oneCardUp = false
         var oneCardIndex = 0
@@ -91,7 +92,7 @@ class ViewController: UIViewController {
         
     
     
-    @IBAction func newGame(_ sender: UIButton) {
+    @IBAction private func newGame(_ sender: UIButton) {
         //flip over all the cards
         var array = [Int]()
         for index in 0..<cardButton.count{
@@ -142,12 +143,12 @@ class ViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel!
     
-    @IBOutlet var cardButton: [UIButton]!
+    @IBOutlet private var cardButton: [UIButton]!
 
     
-    @IBAction func touchButton(_ sender: UIButton) {
+    @IBAction private func touchButton(_ sender: UIButton) {
         //user chooses card - at certain index
         if let cardNumber = cardButton.index(of: sender){
             //function to choose card
@@ -167,7 +168,7 @@ class ViewController: UIViewController {
         
     }
     
-    func updateView(){
+    private func updateView(){
         for cardIndex in cardButton.indices{
             let Button = cardButton[cardIndex]
             let MyCard = mygame.cards[cardIndex]
@@ -185,15 +186,15 @@ class ViewController: UIViewController {
         
     }
     
-    var emojiLibrary = [0:["😇","😉","🤓","🙄","😡","😍","🤑","😋"],
+    private var emojiLibrary = [0:["😇","😉","🤓","🙄","😡","😍","🤑","😋"],
                         1:["🐶","🐷","🐸","🐴","🦁","🐰","🐙"],
                         2:["🌧","⛈","🌨","☀️","☔️","🌝","☃️","💫"]]
 
-    var emojiChoice = ["😇","😉","🤓","🙄","😡","😍","🤑","😋"]
-    var emojiDict = [Int:String]()
+    private var emojiChoice = ["😇","😉","🤓","🙄","😡","😍","🤑","😋"]
+    private var emojiDict = [Int:String]()
     
-    
-    func setTheme(){
+
+    private func setTheme(){
         let emojiIndex = Int(arc4random_uniform(UInt32(emojiLibrary.keys.count)))
         if (emojiLibrary[emojiIndex] != nil){
             emojiChoice = emojiLibrary[emojiIndex]!
@@ -202,7 +203,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func emoji(for card: Card) -> String {
+    private func emoji(for card: Card) -> String {
         
         if emojiDict[card.identifier] == nil, emojiChoice.count>0{
             let randomIndex = Int(arc4random_uniform(UInt32(emojiChoice.count)))
