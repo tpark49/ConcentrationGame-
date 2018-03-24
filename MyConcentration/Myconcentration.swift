@@ -34,7 +34,7 @@ class Myconcentration
         
         //if there is one card up
         if indexOfOne != nil{
-            if cards[index].identifier == cards[indexOfOne!].identifier{
+            if cards[index] == cards[indexOfOne!]{
                 cards[index].isMatched = true
                 cards[indexOfOne!].isMatched = true
             }

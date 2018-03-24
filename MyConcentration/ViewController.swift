@@ -21,30 +21,30 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var scoreLabel: UILabel!
     
-    var scoreLib = [Int:Bool]()
+    var scoreLib = [Card:Bool]()
     private func checkScore(){
         for index in cardButton.indices{
             let card = mygame.cards[index]
             
             if card.faceUp{
                 //if the card is not in the library
-                if scoreLib[card.identifier] == nil{
+                if scoreLib[card] == nil{
                     if card.isMatched == true{
                         
                         scorePoints+=1
                     }
-                    scoreLib[card.identifier] = true
+                    scoreLib[card] = true
                 }
             
                 //if the card is already in the library
-                else if scoreLib[card.identifier] == true{
+                else if scoreLib[card] == true{
                     if card.isMatched == false{
                         scorePoints-=1
                     }
                 }
             
                 //skip the card if matched and seen before
-                if card.isMatched == true, scoreLib[card.identifier]==true{
+                if card.isMatched == true, scoreLib[card]==true{
                     continue
                 }
             
@@ -64,21 +64,21 @@ class ViewController: UIViewController {
             }
         }
         
-        var theOtherPair = 0
+        var theOtherPair: Card?
         //if only onecardup istrue
         if oneCardUp == true{
             if mygame.cards[index].isMatched == false{
                 for cardIndex in cardButton.indices{
-                    if mygame.cards[cardIndex].identifier == mygame.cards[oneCardIndex].identifier, cardIndex != oneCardIndex {
-                        theOtherPair = cardIndex
+                    if mygame.cards[cardIndex] == mygame.cards[oneCardIndex], cardIndex != oneCardIndex {
+                        theOtherPair = mygame.cards[cardIndex]
                     }}
-                if scoreLib[theOtherPair] != nil{
+                if theOtherPair != nil{
                     scorePoints-=1
                 }
             }
         }
-        if scoreLib[index] == nil{
-            scoreLib[index] = true
+        if scoreLib[mygame.cards[index]] == nil{
+            scoreLib[mygame.cards[index]] = true
         }
         
         //if cards have matched
@@ -107,11 +107,11 @@ class ViewController: UIViewController {
         //unique emojies by adding identifiers
         for index in 1...cardButton.count/2{
             let randInt = Int(arc4random_uniform(UInt32(array.count)))
-            mygame.cards[array[randInt]].identifier = index
+            mygame.cards[array[randInt]] = mygame.cards[index]
             array.remove(at: randInt)
             
             let randInt_2 = Int(arc4random_uniform(UInt32(array.count)))
-            mygame.cards[array[randInt_2]].identifier = index
+            mygame.cards[array[randInt_2]] = mygame.cards[index]
             array.remove(at: randInt_2)
         
             
@@ -191,7 +191,7 @@ class ViewController: UIViewController {
                         2:["🌧","⛈","🌨","☀️","☔️","🌝","☃️","💫"]]
 
     private var emojiChoice = ["😇","😉","🤓","🙄","😡","😍","🤑","😋"]
-    private var emojiDict = [Int:String]()
+    private var emojiDict = [Card:String]()
     
 
     private func setTheme(){
@@ -205,10 +205,10 @@ class ViewController: UIViewController {
     
     private func emoji(for card: Card) -> String {
         
-        if emojiDict[card.identifier] == nil, emojiChoice.count>0{
-            emojiDict[card.identifier] = emojiChoice.remove(at: emojiChoice.count.arc4random)
+        if emojiDict[card] == nil, emojiChoice.count>0{
+            emojiDict[card] = emojiChoice.remove(at: emojiChoice.count.arc4random)
         }
-        return emojiDict[card.identifier] ?? "?"
+        return emojiDict[card] ?? "?"
     }
 }
 
