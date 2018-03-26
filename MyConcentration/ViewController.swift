@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     //flipcount variable
     private(set) var flipCount = 0
     
-    
     //score variable
     var scorePoints = 0
     

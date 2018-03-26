@@ -18,23 +18,26 @@ class Myconcentration
     //function to choose card
     func chooseCard(index: Int){
         
-        var indexOfOne:Int?
+        var indexOfOne:Int?{
+            let faceUpIndexCard = cards.indices.filter({cards[$0].faceUp})
+            return faceUpIndexCard.count == 1 ? faceUpIndexCard.first : nil
+        }
     
         
         //check what the value of indexOfOne would be
-        for myIndex in cards.indices{
-            if cards[myIndex].faceUp  == true{
-                if indexOfOne == nil, myIndex != index{
-                    indexOfOne = myIndex
-                }else{
-                    indexOfOne = nil
-                }
-            }
-        }
+//        for myIndex in cards.indices{
+//            if cards[myIndex].faceUp  == true{
+//                if indexOfOne == nil, myIndex != index{
+//                    indexOfOne = myIndex
+//                }else{
+//                    indexOfOne = nil
+//                }
+//            }
+//        }
         
         //if there is one card up
         if indexOfOne != nil{
-            if cards[index] == cards[indexOfOne!]{
+            if cards[index] == cards[indexOfOne!], index != indexOfOne!{
                 cards[index].isMatched = true
                 cards[indexOfOne!].isMatched = true
             }
@@ -68,7 +71,12 @@ class Myconcentration
     
 }
     
-        
 
+
+extension Collection {
+    var oneAndOnly: Iterator.Element {
+        return (count == 1 ? first : nil)!
+    }
+}
 
 
