@@ -18,6 +18,7 @@ class Myconcentration
     //function to choose card
     func chooseCard(index: Int){
         
+        //closure function of cards to count
         var indexOfOne:Int?{
             let faceUpIndexCard = cards.indices.filter({cards[$0].faceUp})
             return faceUpIndexCard.count == 1 ? faceUpIndexCard.first : nil
@@ -51,7 +52,7 @@ class Myconcentration
 
     }
 
-//init - arguemtn? - initialiize the array of cards
+//init - argument? - initialiize the array of cards
     init(numberOfPairsofCards: Int){
         var randomDeck = [Card]()
         for _ in 1...numberOfPairsofCards{
@@ -72,7 +73,7 @@ class Myconcentration
 }
     
 
-
+//extension to add to collection 
 extension Collection {
     var oneAndOnly: Iterator.Element {
         return (count == 1 ? first : nil)!
