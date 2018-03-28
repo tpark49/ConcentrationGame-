@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var scoreLabel: UILabel!
     
     var scoreLib = [Card:Bool]()
+    
+    //doesn't work
     private func checkScore(){
         for index in cardButton.indices{
             let card = mygame.cards[index]
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
                         
                         scorePoints+=1
                     }
+                    
                     scoreLib[card] = true
                 }
             
@@ -51,7 +54,7 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score:" + String(scorePoints)
         }}
     
-    
+    //function to update score
     private func updateScore(at index: Int){
         //find out if there is only one card faced up
         var oneCardUp = false
@@ -90,7 +93,7 @@ class ViewController: UIViewController {
     
         
     
-    
+    //a function to start a new game
     @IBAction private func newGame(_ sender: UIButton) {
         //flip over all the cards
         var array = [Int]()

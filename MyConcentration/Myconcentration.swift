@@ -73,7 +73,7 @@ class Myconcentration
 }
     
 
-//extension to add to collection 
+//extension to add to collection
 extension Collection {
     var oneAndOnly: Iterator.Element {
         return (count == 1 ? first : nil)!
