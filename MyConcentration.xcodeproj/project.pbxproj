@@ -60,8 +60,8 @@
 			children = (
 				13477F182060828F00113BC4 /* Myconcentration.swift */,
 				13477F1A206082F000113BC4 /* mycards.swift */,
-				13477F17206060AF00113BC4 /* New Group */,
 				13477F072060609000113BC4 /* ViewController.swift */,
+				13477F17206060AF00113BC4 /* New Group */,
 				13477F092060609000113BC4 /* Main.storyboard */,
 			);
 			path = MyConcentration;
@@ -315,6 +315,7 @@
 				13477F162060609000113BC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
